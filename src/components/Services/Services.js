@@ -4,14 +4,20 @@ import consultorio from '../assets/icons/consultorio.png'
 import instructorado from '../assets/icons/instructorado.png'
 import talleres from '../assets/icons/talleres.png'
 import {Link} from "react-router-dom";
-
+import { motion} from "framer-motion"
 
 const Services = () => {
     return (
         <div className="services-container">
             <div className="services-selector">
-                <h1>SERVICIOS</h1>
-                <div className="services-boxes">
+                <motion.h1 initial={{opacity: 0, y: 50}}
+                           whileInView={{opacity: 1, y: 0}}
+                           viewport={{once: true}}
+                           transition={{duration: 0.8}}>SERVICIOS</motion.h1>
+                <motion.div  initial={{opacity: 0, y: 50}}
+                             whileInView={{opacity: 1, y: 0}}
+                             viewport={{once: true}}
+                             transition={{duration: 0.8}} className="services-boxes">
                     <Link to='/instructorado-yoga' className="services-card-1">
                         <img src={instructorado} alt=""/>
                         <h4>INSTRUCTORADO <br/> DE YOGA</h4>
@@ -36,7 +42,7 @@ const Services = () => {
                         <p>Biodescodificacion - Constelaciones Familiares</p>
                         <a >Leer mas ></a>
                     </Link>
-                </div>
+                </motion.div>
             </div>
         </div>
 

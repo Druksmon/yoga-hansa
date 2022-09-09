@@ -10,9 +10,7 @@ import Footer from "../../components/Footer/Footer";
 const Home = () => {
     return (
         <>
-            <Header title='YOGA' span='HANSA' sub='Comprende, Sana y Despiertate.'
-                    text='En Yoga Hansa te brindamos  herramientas unicas y el acompañamiento personalizado que estas buscando para tu camino de Evolución Espiritual.'
-                    backgroud='header-background'/>
+            <Header backgroud='header-background'/>
             <Services/>
             <Testimonios/>
             <AboutMe/>

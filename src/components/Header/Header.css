@@ -5,7 +5,7 @@ header{
 
 .header-background{
     background-image: url(../assets/background-header.jpg);
-    background-blend-mode: darken;
+    background-blend-mode: screen;
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: bottom;

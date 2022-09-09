@@ -2,7 +2,7 @@ import './Nav.css'
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import logo from '../assets/LOGO HANSA REDUCIDO.png'
-
+import {AnimatePresence, motion} from "framer-motion"
 
 const Nav = () => {
 
@@ -21,12 +21,13 @@ const Nav = () => {
 
     return (
         <>
-            <nav className={color ? 'navigation-scroll' : 'navigation'}>
-                <div className='navigation-selector'>
+            <motion.nav  className={color ? 'navigation navigation-scroll' : ' navigation navigation-shadow'}>
+                <motion.div initial={{ opacity: 0}} animate={{opacity: 1}}
+                            transition={{duration: 0.8}} exit={{x: 1000}} className='navigation-selector'>
 
                     <Link to='/' className="brand-name">
                         <img src={logo} alt=""/>
-                        <div>
+                        <div className='brand-name-text'>
                             <h3>Ximena Pissaco</h3>
                             <p>Hansa Yoga</p>
                         </div>
@@ -64,9 +65,9 @@ const Nav = () => {
                             </li>
                         </ul>
                     </div>
-                </div>
+                </motion.div>
 
-            </nav>
+            </motion.nav>
         </>
     )
 

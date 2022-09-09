@@ -1,19 +1,23 @@
 import './Header.css'
 import WhatsAppButton from "../WhatsAppButton/WhatsAppButton";
+import { motion} from "framer-motion"
 
 
-
-const Header = ({title, span, sub, text, backgroud}) => {
+const Header = ({backgroud}) => {
     return (
 
         <header id='header' className={backgroud}>
             <div className="header-container">
-                <div className="header-box">
-                    <h1>{title} <br/> <span>{span}</span></h1>
-                    <h3>{sub}</h3>
+                <motion.div  className="header-box">
+                    <motion.h1 initial={{ opacity: 0}} animate={{opacity: 1}}
+                               transition={{duration: 1.2}} >YOGA <br/> <motion.span initial={{ opacity: 0}} animate={{opacity: 1}}
+                                                                                     transition={{duration: 1.2}} exit={{x: 1000}}>HANSA</motion.span></motion.h1>
+                    <motion.h3 initial={{ opacity: 0}} animate={{opacity: 1}}
+                               transition={{duration: 2.3}} exit={{x: 1000}}>Comprende, Sana y Despiertate.</motion.h3>
                    <WhatsAppButton/>
-                    <p>{text}</p>
-                </div>
+                    <motion.p initial={{ opacity: 0}} animate={{opacity: 1}}
+                              transition={{duration: 2.3}} exit={{x: 1000}}>En Yoga Hansa te brindamos  herramientas unicas y el acompañamiento personalizado que estas buscando para tu camino de Evolución Espiritual.</motion.p>
+                </motion.div>
             </div>
 
         </header>

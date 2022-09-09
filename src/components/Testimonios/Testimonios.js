@@ -1,4 +1,5 @@
 import './Testimonios.css'
+import {motion} from "framer-motion"
 import profile1 from '../assets/profile-1.png'
 import profile2 from '../assets/profile-2.png'
 import profile3 from '../assets/profile-3.png'
@@ -9,10 +10,16 @@ const Testimonios = () => {
 
         <div className="testimonio-container">
             <div className="testimonio-selector">
-                <h1>TESTIMONIOS</h1>
+                <motion.h1 initial={{opacity: 0, y: 50}}
+                           whileInView={{opacity: 1, y: 0}}
+                           viewport={{once: true}}
+                           transition={{duration: 0.8}}>TESTIMONIOS
+                </motion.h1>
                 <div className="testimonio-boxes">
 
-                    <div className="testimonio-card">
+                    <motion.div initial={{opacity: 0, x: -50}} whileInView={{opacity: 1, x: 0}}
+                                viewport={{once: true}}
+                                transition={{duration: 1.2}} className="testimonio-card">
                         <div className="testimonio-card-info">
                             <div className="profile-card">
                                 <img src={profile4} alt=""/>
@@ -26,8 +33,10 @@ const Testimonios = () => {
                                 como Chi-Qung y los Talleres de los Elementos me ayudaron a conocerme más y poder
                                 equilibrarme para atravesar estos tiempos difíciles que nos tocan. </p>
                         </div>
-                    </div>
-                    <div className="testimonio-card">
+                    </motion.div>
+                    <motion.div  initial={{opacity: 0, y: -50}} whileInView={{opacity: 1, y: 0}}
+                                 viewport={{once: true}}
+                                 transition={{duration: 1.2}} className="testimonio-card">
                         <div className="testimonio-card-info">
                             <div className="profile-card">
                                 <img src={profile2} alt=""/>
@@ -41,9 +50,11 @@ const Testimonios = () => {
                                 Tener las herramientas para mantenerme en equilibrio a través del yoga y el zazen ha
                                 sido una adquisición invaluable.</p>
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="testimonio-card">
+                    <motion.div  initial={{opacity: 0, x: -50}} whileInView={{opacity: 1, x: 0}}
+                                 viewport={{once: true}}
+                                 transition={{duration: 1.2}} className="testimonio-card">
                         <div className="testimonio-card-info">
                             <div className="profile-card">
                                 <img src={profile3} alt=""/>
@@ -58,8 +69,10 @@ const Testimonios = () => {
                                 sentimientos que me habían provocado angustia.
                             </p>
                         </div>
-                    </div>
-                    <div className="testimonio-card">
+                    </motion.div>
+                    <motion.div  initial={{opacity: 0, y: 50}} whileInView={{opacity: 1, y: 0}}
+                                 viewport={{once: true}}
+                                 transition={{duration: 1.2}} className="testimonio-card">
                         <div className="testimonio-card-info">
                             <div className="profile-card">
                                 <img src={profile1} alt=""/>
@@ -71,7 +84,7 @@ const Testimonios = () => {
                             <p>En los talleres pude ponerme en contacto con sentimientos que entraban profundamente en
                                 mi familia y que no lograba llegar a entender, la ayuda del grupo es revitalizante.</p>
                         </div>
-                    </div>
+                    </motion.div>
 
 
                 </div>
