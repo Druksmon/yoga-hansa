@@ -10,7 +10,7 @@ const AboutMe = () => {
             {/*<h1>SOBRE MI</h1>*/}
             <div className="about-selector">
                 <motion.img initial={{ opacity: 0, x:-100}} whileInView={{opacity: 1,x:0}} viewport={{once: true}}
-                             transition={{duration: 1.2}} className='about-profile-picture' src={profile} alt=""/>
+                             transition={{duration: 0.9}} className='about-profile-picture' src={profile} alt=""/>
                 <motion.div initial={{ opacity: 0}} whileInView={{opacity: 1}}  viewport={{once: true}}
                             transition={{duration: 1.2}} className='about-text'>
                     <div>

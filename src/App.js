@@ -25,7 +25,6 @@ function App() {
                 <Route path='/consultorio' element={<Consultorio/>}/>
             </Routes>
 
-
         </BrowserRouter>
     );
 }

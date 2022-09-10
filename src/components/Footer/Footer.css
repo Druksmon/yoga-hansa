@@ -1,7 +1,8 @@
 .footer-container {
     width: 100%;
-    background-color: white;
     display: flex;
+    background: rgb(255, 255, 255);
+
 }
 
 .footer-selector {
