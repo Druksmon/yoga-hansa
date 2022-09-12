@@ -22,7 +22,7 @@ const Testimonios = () => {
                                 transition={{duration: 1.2}} className="testimonio-card">
                         <div className="testimonio-card-info">
                             <div className="profile-card">
-                                <img src={profile4} alt=""/>
+                                <img src={profile1} alt=""/>
                                 <div>
                                     <h6>Maria Laura</h6>
                                     <p>Clases virtuales de Yoga y Chi Kung</p>
@@ -75,7 +75,7 @@ const Testimonios = () => {
                                  transition={{duration: 1.2}} className="testimonio-card">
                         <div className="testimonio-card-info">
                             <div className="profile-card">
-                                <img src={profile1} alt=""/>
+                                <img src={profile4} alt=""/>
                                 <div>
                                     <h6>Ailin Caceres</h6>
                                     <p>Talleres</p>
